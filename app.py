@@ -98,7 +98,7 @@ def recommend(movie_name, top_n):
 # Streamlit App
 # -----------------------------
 st.set_page_config(page_title="Movie App", layout="wide")
-st.title("🎬 Movie Application - Sentiment Analysis & Recommendation")
+st.title("Movie Application - Sentiment Analysis & Recommendation")
 
 tab1, tab2, tab3 = st.tabs(["Movie Review Sentiment Analysis", "Movie Recommendation", "About"])
 
@@ -118,7 +118,7 @@ with tab1:
             clean_review = preprocess_text(review_text)
             vect_review = vectorizer.transform([clean_review])
             prediction = nb_model.predict(vect_review)[0]
-            sentiment = "Positive 😊" if prediction == 1 else "Negative 😞"
+            sentiment = "Positive" if prediction == 1 else "Negative"
             color = "#2ecc71" if prediction == 1 else "#ff4b4b"
 
             if hasattr(nb_model, "predict_proba"):
