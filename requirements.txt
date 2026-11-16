@@ -1,0 +1,17 @@
+# Data Manipulation
+pandas
+
+# Natural Language Processing
+nltk
+
+# Machine Learning
+# Models were serialized with scikit-learn 1.6.x; allow that line or newer
+# so Cloud can always resolve a compatible wheel (loads with a soft warning).
+scikit-learn>=1.6
+
+# Visualization
+seaborn
+matplotlib
+
+# Web Interface
+streamlit
